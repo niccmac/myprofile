@@ -204,7 +204,7 @@ export default function Work() {
             maxWidth="100%"
           >
             <Text fontSize="xl" w="100%">
-              Work Experiance
+              Work Experience
             </Text>
             <Divider />
             <Text fontSize="sm">Previous roles.</Text>
