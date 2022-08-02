@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+  overflow: scroll;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.avatar {
+  margin: 20px;
+}
+
+.App {
+  /* background:
+		linear-gradient(90deg, hsl(256,33,10) (22px - 1px), transparent 1%) center,
+		linear-gradient(hsl(256,33,10) (22px - 1px), transparent 1%) center,
+		hsl(256,33,70);
+	background-size: 22px 22px; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-image: radial-gradient(#000 15%, transparent 10%);
+  background-size: 10px 10px;
+  background-color: #b68f40;
+  color: #eee5e9;
+}
+
+.main-container {
+  position: relative;
+  left: 30px;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(158, 156, 156);
+  opacity: 1; /* Firefox */
+}
+
+.project-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.contact {
+  position: fixed;
+  left: 0%;
+  bottom: 0%;
+  right: 0%;
+}
+
+.profile {
+  display: flex;
+  padding: 1.5em;
+  height: 20%;
+  justify-content: space-between;
+  width: 100%; /**/
+  z-index: 20;
+  position: absolute;
+  top: 0; /**/
+}
+
+.projects {
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  overflow: scroll;
+  justify-content: center;
+  width: 100vw;
+
+  margin-top: 10%;
+}
+.avatar {
+  vertical-align: middle;
+}
+
+.job-description {
+  padding-left: 50px;
+  padding-right: 50px;
+}
