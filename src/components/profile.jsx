@@ -6,10 +6,10 @@ export default function Profile() {
   return (
     <Flex
       flexDirection={["column", "row"]}
-      h={["400", "300"]}
+      h={["400", "400"]}
       alignItems="center"
       padding={[4, 8]}
-      w="60%"
+      w={["92%", "60%"]}
       justifyContent="space-between"
       backgroundColor="#FFFFF0"
       marginBottom={"20px"}
