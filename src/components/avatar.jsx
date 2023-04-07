@@ -1,5 +1,4 @@
 import { Avatar, Box } from "@chakra-ui/react";
-import Contact from "./contact";
 export default function ProfileAvatar() {
   return (
     <Box>

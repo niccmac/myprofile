@@ -65,17 +65,6 @@
   right: 0%;
 }
 
-.profile {
-  display: flex;
-  padding: 1.5em;
-  height: 20%;
-  justify-content: space-between;
-  width: 100%; /**/
-  z-index: 20;
-  position: absolute;
-  top: 0; /**/
-}
-
 .projects {
   display: flex;
   justify-self: center;

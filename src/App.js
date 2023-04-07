@@ -7,22 +7,7 @@ import Skills from "./components/skills";
 import Profile from "./components/profile";
 import { extendTheme, ChakraProvider } from "@chakra-ui/react";
 
-import {
-  Center,
-  Text,
-  Box,
-  Divider,
-  Grid,
-  GridItem,
-  Heading,
-  Stack,
-  Link,
-  Image,
-  Flex,
-  VStack,
-  HStack,
-  Icon,
-} from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import Work from "./components/work";
 
 const colors = {
@@ -30,24 +15,23 @@ const colors = {
     900: "#d7ccc8", // Dark
     800: "#eee5e9", // Lavender
     700: "#b68f40", // Dark Gold
-    600: "#545454", // Grey
-  },
+    600: "#545454" // Grey
+  }
 };
 function App() {
   const theme = extendTheme({ colors });
   return (
     <ChakraProvider theme={theme}>
       <div className="App">
-        <Profile />
-
         <Flex
           padding={4}
-          minWidth="max-content"
           alignItems="center"
           flexDirection="column"
-          marginBottom="200px"
-          marginTop="100px"
+          margin={["20px"]}
+          marginBottom={["200px"]}
+          marginTop={["30px", "100px"]}
         >
+          <Profile />
           <Projects />
           <br />
           <Skills />
