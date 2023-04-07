@@ -26,6 +26,7 @@ import {
   SiChakraui,
   SiMaterialui
 } from "react-icons/si";
+import { MyText } from "./text";
 
 export default function Skills() {
   const skills = [
@@ -119,12 +120,18 @@ export default function Skills() {
     }
   ];
   return (
-    <SimpleGrid columns={1} backgroundColor="#FFFFF0" w={["92%", "70%"]}>
+    <SimpleGrid
+      columns={1}
+      backgroundColor="#FFFFF0"
+      borderRadius={20}
+      w={["92%", "70%"]}
+    >
       <Box
         colSpan={1}
         padding={[4, 8]}
         style={{
-          boxShadow: "10px 10px  #b23838"
+          boxShadow: "10px 10px  #b23838",
+          borderRadius: 20
         }}
       >
         <Center flexDirection="column">
@@ -134,11 +141,14 @@ export default function Skills() {
             margin={1}
             maxWidth="100%"
           >
-            <Text fontSize="xl" w="100%">
-              Skills
-            </Text>
+            <MyText
+              text="Skills"
+              bold
+              style={{ fontSize: 20, fontWeight: 800 }}
+            />
+
             <Divider />
-            <Text fontSize="sm">Tried and tested.</Text>
+            <MyText text="Tried and tested" />
           </Container>
 
           <SimpleGrid

@@ -1,5 +1,5 @@
 import ProfileAvatar from "./avatar";
-import { Text, Divider, Flex, Container } from "@chakra-ui/react";
+import { Divider, Flex, Container } from "@chakra-ui/react";
 import { MyText } from "./text";
 
 export default function Profile() {

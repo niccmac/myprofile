@@ -28,6 +28,7 @@ import {
   AccordionItem,
   AccordionIcon
 } from "@chakra-ui/react";
+import { MyText } from "./text";
 
 // Send button colours
 // TODO get tool tip working. Appears after alert
@@ -214,11 +215,16 @@ export default function Work() {
   ];
 
   return (
-    <SimpleGrid columns={1} backgroundColor="#FFFFF0" w={["92%", "70%"]}>
+    <SimpleGrid
+      columns={1}
+      backgroundColor="#FFFFF0"
+      borderRadius={20}
+      w={["92%", "70%"]}
+    >
       <Box
         colSpan={1}
         padding={[4, 8]}
-        style={{ boxShadow: "10px 10px #b23838" }}
+        style={{ boxShadow: "10px 10px #b23838", borderRadius: 20 }}
       >
         <Center flexDirection="column">
           <Container
@@ -227,11 +233,14 @@ export default function Work() {
             margin={1}
             maxWidth="100%"
           >
-            <Text fontSize="xl" w="100%">
-              Work Experience
-            </Text>
+            <MyText
+              text="Work Experience"
+              bold
+              style={{ fontSize: 20, fontWeight: 800 }}
+            />
+
             <Divider />
-            <Text fontSize="sm">Previous roles.</Text>
+            <MyText text="Previous roles." />
           </Container>
 
           <Stack className="jobs" w="100%">

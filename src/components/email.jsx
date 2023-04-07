@@ -6,13 +6,13 @@ import {
   Button,
   Textarea,
   Container,
-  Text,
   Divider,
   useToast,
   SimpleGrid,
   Box,
   Center
 } from "@chakra-ui/react";
+import { MyText } from "./text";
 
 // Send button colours
 // TODO get tool tip working. Appears after alert
@@ -55,10 +55,15 @@ export default function Email() {
   };
 
   return (
-    <SimpleGrid columns={1} backgroundColor="#FFFFF0" w={["92%", "70%"]}>
+    <SimpleGrid
+      columns={1}
+      backgroundColor="#FFFFF0"
+      borderRadius={20}
+      w={["92%", "70%"]}
+    >
       <Box
         colSpan={1}
-        style={{ boxShadow: "10px 10px  #b23838" }}
+        style={{ boxShadow: "10px 10px  #b23838", borderRadius: 20 }}
         padding={[4, 8]}
       >
         <Center flexDirection="column">
@@ -68,11 +73,14 @@ export default function Email() {
             margin={1}
             maxWidth="100%"
           >
-            <Text fontSize="xl" w="100%">
-              Contact
-            </Text>
+            <MyText
+              text="Contact"
+              bold
+              style={{ fontSize: 20, fontWeight: 800 }}
+            />
+
             <Divider />
-            <Text fontSize="sm">Send me an email.</Text>
+            <MyText text="Send me an email." />
           </Container>
           <Container flexDirection={["column"]} marginTop={5} maxWidth="100%">
             <form ref={form} onSubmit={sendEmail}>
@@ -81,11 +89,13 @@ export default function Email() {
                   placeholder="Write your message here!"
                   color="brand.800"
                   colorScheme="brand.900"
+                  borderColor="transparent"
                   focusBorderColor="brand.800"
                   errorBorderColor="red.500"
                   isRequired
                   name="message"
                   h="200px"
+                  style={{ borderWidth: 0 }}
                 />
 
                 <Input
@@ -96,6 +106,7 @@ export default function Email() {
                   errorBorderColor="red.500"
                   isRequired
                   name="name"
+                  style={{ borderWidth: 0 }}
                 />
                 <Input
                   placeholder="Your email"
@@ -104,21 +115,26 @@ export default function Email() {
                   errorBorderColor="red.500"
                   isRequired
                   name="email"
+                  style={{ borderWidth: 0 }}
                 />
 
                 <Button
-                  colorScheme="brand.800"
-                  borderColor="brand.800"
-                  variant="outline"
+                  variant="solid"
                   type="submit"
                   value="Submit"
                   size="md"
+                  style={{
+                    color: "#FFFFF0",
+                    backgroundColor: "#b23838",
+                    boxShadow: "1px 1px  #b23838",
+                    borderRadius: 10,
+                    width: "50%",
+                    alignSelf: "center"
+                  }}
                 >
                   Send!
                 </Button>
               </Box>
-              {/* </GridItem>
-              </Grid> */}
             </form>
           </Container>
         </Center>

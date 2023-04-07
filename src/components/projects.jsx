@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import GameProvider from "../providers/cardProvider";
 import CardGame from "./cardGame";
+import { MyText } from "./text";
 
 export const Projects = () => {
   const arrowStyles = {
@@ -125,24 +126,29 @@ export const Projects = () => {
 
   return (
     <>
-      <Flex pos="relative" w="100%" height={["1000px"]} padding={[4, 8]}>
+      <Flex pos="relative" w="100%" height={["1000px"]}>
         <Flex h="full" w="100%" {...carouselStyle}>
           <Box align="center" boxSize="full" flex="none" padding={4}>
             <Container
+              padding={[4, 8]}
               flexDirection="column"
               align="left"
               backgroundColor="#FFFFF0"
               h="95%"
               w="100%"
               style={{
-                boxShadow: "10px 10px  #b23838"
+                boxShadow: "10px 10px  #b23838",
+                borderRadius: 20
               }}
             >
-              <Text fontSize="3xl" w="100%">
-                Projects
-              </Text>
+              <MyText
+                text="Projects"
+                bold
+                style={{ fontSize: 20, fontWeight: 800 }}
+              />
+
               <Divider />
-              <Text fontSize="sm">What I'm working on.</Text>
+              <MyText text="What I've been working on." />
             </Container>
           </Box>
           {slides.map((slide) => (
@@ -162,7 +168,8 @@ export const Projects = () => {
                   h="95%"
                   w="100%"
                   style={{
-                    boxShadow: "10px 10px  #b23838"
+                    boxShadow: "10px 10px  #b23838",
+                    borderRadius: 20
                   }}
                 >
                   <Container
@@ -176,13 +183,18 @@ export const Projects = () => {
                     m={10}
                     // overflow="scroll"
                   >
-                    <Text fontSize="3xl" w="100%">
-                      <a href={slide.link} target="	_blank">
-                        {slide.project}
-                      </a>
-                    </Text>
+                    <MyText
+                      text={
+                        <a href={slide.link} target="	_blank">
+                          {slide.project}
+                        </a>
+                      }
+                      bold
+                      style={{ fontSize: 20, fontWeight: 800 }}
+                    />
+
                     <Divider />
-                    <Text fontSize="sm"> {slide.text}</Text>
+                    <MyText text={slide.text} />
                   </Container>
 
                   {slide.accordian}
