@@ -35,9 +35,9 @@
   left: 0;
   min-width: 100%;
   min-height: 100%;
-  background-image: radial-gradient(#000 15%, transparent 10%);
+  background-image: radial-gradient(#b23838 15%, transparent 10%);
   background-size: 10px 10px;
-  background-color: #b68f40;
+  background-color: #f78989;
   color: #eee5e9;
 }
 

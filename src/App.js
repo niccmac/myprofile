@@ -35,6 +35,7 @@ function App() {
           <Projects />
           <Skills />
           <Work />
+
           <Email />
         </Flex>
         <div className="contact">

@@ -5,22 +5,15 @@ import {
   Input,
   Button,
   Textarea,
-  Stack,
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
   Container,
   Text,
   Divider,
   useToast,
   SimpleGrid,
   Box,
-  Center,
-  Grid,
-  GridItem,
+  Center
 } from "@chakra-ui/react";
-import { useState } from "react";
+
 // Send button colours
 // TODO get tool tip working. Appears after alert
 // TODO fix divider full width
@@ -36,7 +29,7 @@ export default function Email() {
       status: "success",
       duration: 1000,
       isClosable: true,
-      position: "top",
+      position: "top"
     });
   }
   const sendEmail = (e) => {
@@ -62,13 +55,12 @@ export default function Email() {
   };
 
   return (
-    <SimpleGrid
-      columns={1}
-      backgroundColor="brand.600"
-      // justifyContent="center"
-      w="70%"
-    >
-      <Box colSpan={1} style={{ boxShadow: "10px 10px  #2D4739" }}>
+    <SimpleGrid columns={1} backgroundColor="brand.600" w={["92%", "70%"]}>
+      <Box
+        colSpan={1}
+        style={{ boxShadow: "10px 10px  #2D4739" }}
+        padding={[4, 8]}
+      >
         <Center flexDirection="column">
           <Container
             flexDirection="column"
@@ -82,73 +74,51 @@ export default function Email() {
             <Divider />
             <Text fontSize="sm">Send me an email.</Text>
           </Container>
-          <Container flexDirection="column" marginTop={5} maxWidth="100%">
+          <Container flexDirection={["column"]} marginTop={5} maxWidth="100%">
             <form ref={form} onSubmit={sendEmail}>
-              <Grid
-                h="200px"
-                templateRows="repeat(2, 1fr)"
-                templateColumns="repeat(4, 1fr)"
-                gap={4}
-              >
-                <GridItem
-                  rowSpan={2}
-                  colSpan={3}
-                  display="flex"
-                  flexDirection="column"
-                  justifyContent="space-between"
-                  alignItems="center"
+              <Box display="flex" flexDirection={["column"]} gap={3}>
+                <Textarea
+                  placeholder="Write your message here!"
+                  color="brand.800"
+                  colorScheme="brand.900"
+                  focusBorderColor="brand.800"
+                  errorBorderColor="red.500"
+                  isRequired
+                  name="message"
+                  h="200px"
+                />
+
+                <Input
+                  placeholder="Your name"
+                  color="brand.900"
+                  colorScheme="brand.900"
+                  focusBorderColor="brand.900"
+                  errorBorderColor="red.500"
+                  isRequired
+                  name="name"
+                />
+                <Input
+                  placeholder="Your email"
+                  colorScheme="brand.800"
+                  focusBorderColor="brand.800"
+                  errorBorderColor="red.500"
+                  isRequired
+                  name="email"
+                />
+
+                <Button
+                  colorScheme="brand.800"
+                  borderColor="brand.800"
+                  variant="outline"
+                  type="submit"
+                  value="Submit"
+                  size="md"
                 >
-                  <Textarea
-                    placeholder="Write your message here!"
-                    color="brand.800"
-                    colorScheme="brand.900"
-                    focusBorderColor="brand.800"
-                    errorBorderColor="red.500"
-                    isRequired
-                    name="message"
-                    h="80%"
-                  />
-                </GridItem>
-                <GridItem
-                  rowSpan={2}
-                  colSpan={1}
-                  display="flex"
-                  flexDirection="column"
-                  justifyContent="space-between"
-                  alignItems="center"
-                  paddingBottom={10}
-                >
-                  <Input
-                    placeholder="Your name"
-                    color="brand.900"
-                    colorScheme="brand.900"
-                    focusBorderColor="brand.900"
-                    errorBorderColor="red.500"
-                    isRequired
-                    name="name"
-                  />
-                  <Input
-                    placeholder="Your email"
-                    colorScheme="brand.800"
-                    focusBorderColor="brand.800"
-                    errorBorderColor="red.500"
-                    isRequired
-                    name="email"
-                  />
-                  <span>
-                    <Button
-                      colorScheme="brand.800"
-                      borderColor="brand.800"
-                      variant="outline"
-                      type="submit"
-                      value="Submit"
-                      size="sm"
-                    >
-                      Send!
-                    </Button>
-                  </span>
-                </GridItem>
-              </Grid>
+                  Send!
+                </Button>
+              </Box>
+              {/* </GridItem>
+              </Grid> */}
             </form>
           </Container>
         </Center>
