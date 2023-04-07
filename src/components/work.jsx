@@ -214,11 +214,11 @@ export default function Work() {
   ];
 
   return (
-    <SimpleGrid columns={1} backgroundColor="brand.600" w={["92%", "70%"]}>
+    <SimpleGrid columns={1} backgroundColor="#FFFFF0" w={["92%", "70%"]}>
       <Box
         colSpan={1}
         padding={[4, 8]}
-        style={{ boxShadow: "10px 10px #2D4739" }}
+        style={{ boxShadow: "10px 10px #b23838" }}
       >
         <Center flexDirection="column">
           <Container

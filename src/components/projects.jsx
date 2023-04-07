@@ -131,11 +131,11 @@ export const Projects = () => {
             <Container
               flexDirection="column"
               align="left"
-              backgroundColor="brand.600"
+              backgroundColor="#FFFFF0"
               h="95%"
               w="100%"
               style={{
-                boxShadow: "10px 10px  #2D4739"
+                boxShadow: "10px 10px  #b23838"
               }}
             >
               <Text fontSize="3xl" w="100%">
@@ -158,11 +158,11 @@ export const Projects = () => {
                   flexDirection="column"
                   align="left"
                   justifyContent="center"
-                  backgroundColor="brand.600"
+                  backgroundColor="#FFFFF0"
                   h="95%"
                   w="100%"
                   style={{
-                    boxShadow: "10px 10px  #2D4739"
+                    boxShadow: "10px 10px  #b23838"
                   }}
                 >
                   <Container
@@ -170,7 +170,7 @@ export const Projects = () => {
                     flexDirection="column"
                     align="left"
                     margin={1}
-                    backgroundColor="brand.600"
+                    backgroundColor="#FFFFF0"
                     h="35%"
                     w="80%"
                     m={10}

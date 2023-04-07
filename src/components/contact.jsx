@@ -8,7 +8,7 @@ import {
   AlertDialogFooter,
   Button,
   AlertDialogBody,
-  useToast,
+  useToast
 } from "@chakra-ui/react";
 
 import { useRef, useState } from "react";
@@ -32,7 +32,7 @@ export default function Contact() {
       status: "success",
       duration: 1000,
       isClosable: true,
-      position: "top",
+      position: "top"
     });
   }
 
@@ -40,18 +40,18 @@ export default function Contact() {
     {
       title: "Open my GitHub",
       link: "https://github.com/niccmac",
-      icon: <FaGitSquare size="45" color="#2D4739" />,
+      icon: <FaGitSquare size="45" color="#b23838" />
     },
     {
       title: "Open my LinkedIn",
       link: "https://www.linkedin.com/in/nicole-maclean/",
-      icon: <FaLinkedin size="45" color="#2D4739" />,
+      icon: <FaLinkedin size="45" color="#b23838" />
     },
     {
       title: "Open my resume",
       link: "https://www.cakeresume.com/s--JTk4kmJ9lt80lFKgKeCDZg--/nicole-maclean",
-      icon: <FaRegFileAlt size="40" color="#2D4739" />,
-    },
+      icon: <FaRegFileAlt size="40" color="#b23838" />
+    }
   ];
   return (
     <div>
@@ -59,7 +59,7 @@ export default function Contact() {
         display="flex"
         justifyContent="space-evenly"
         alignItems="center"
-        backgroundColor="brand.600"
+        backgroundColor="#FFFFF0"
         padding={4}
       >
         {contacts.map((contact) => {
@@ -73,7 +73,7 @@ export default function Contact() {
         })}
 
         <div title="Copy my email to your clipboard">
-          <MdEmail size="45" onClick={copy} color="#2D4739" />
+          <MdEmail size="45" onClick={copy} color="#b23838" />
         </div>
       </Box>
     </div>

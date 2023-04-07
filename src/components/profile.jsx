@@ -10,10 +10,10 @@ export default function Profile() {
       padding={[4, 8]}
       w="100%"
       justifyContent="space-between"
-      backgroundColor="brand.600"
+      backgroundColor="#FFFFF0"
       marginBottom={"20px"}
       style={{
-        boxShadow: "10px 10px #2D4739"
+        boxShadow: "10px 10px #b23838"
       }}
     >
       <Container flexDirection="column" align="left" margin={1} maxWidth="100%">
