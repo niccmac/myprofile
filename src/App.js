@@ -27,7 +27,6 @@ function App() {
           padding={4}
           alignItems="center"
           flexDirection="column"
-          margin={["20px"]}
           marginBottom={["200px"]}
           marginTop={["30px", "100px"]}
         >

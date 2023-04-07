@@ -4,16 +4,14 @@ import {
   Divider,
   Text,
   Image,
-  Center,
   Box,
   Flex,
-  HStack,
-  SimpleGrid,
+  HStack
 } from "@chakra-ui/react";
 import GameProvider from "../providers/cardProvider";
 import CardGame from "./cardGame";
 
-export default function Projects() {
+export const Projects = () => {
   const arrowStyles = {
     cursor: "pointer",
     pos: "absolute",
@@ -29,8 +27,8 @@ export default function Projects() {
     userSelect: "none",
     _hover: {
       opacity: 0.8,
-      bg: "black",
-    },
+      bg: "black"
+    }
   };
   const slides = [
     {
@@ -43,14 +41,14 @@ export default function Projects() {
           <source src="focal_pres_original.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      ),
+      )
     },
     {
       sid: 3,
       project: "Square Life",
       text: "Right now, I'm working on a GitHub gamification-inspired tracking app. Currently, I'm learning how to use sequilise to set up the database! So far it's named Square Life. If you have ANY better suggestions please let me know! The idea is a daily log of certain tasks. The more you do that task the more pronounced the square for that day becomes!",
       link: "https://github.com/niccmac/squareLife",
-      accordian: <Image src="slwireframe.png" alt="Wireframe" />,
+      accordian: <Image src="slwireframe.png" alt="Wireframe" />
     },
 
     {
@@ -62,28 +60,28 @@ export default function Projects() {
         <GameProvider>
           <CardGame></CardGame>
         </GameProvider>
-      ),
+      )
     },
     {
       sid: 5,
       project: "Maps",
       text: "This project allows a user to create lists of their favourite spots. It uses Node, Postgres, JQuery, EJS and an external API for maps.",
       link: "https://github.com/ralphunrau/maps_midterm",
-      accordian: <Image src="ezgif.com-gif-maker.gif" alt="mapsgif" />,
+      accordian: <Image src="ezgif.com-gif-maker.gif" alt="mapsgif" />
     },
     {
       sid: 6,
       project: "Scheduler",
       text: "This was a great project where I first learnt to use React. Its an app where users can book, edit and cancel appointments. It uses Express REST API routes and a Postgres backend. SPA.",
       link: "https://github.com/niccmac/scheduler",
-      accordian: <Image src="schedulerGIF.gif" alt="mapsgif" />,
+      accordian: <Image src="schedulerGIF.gif" alt="mapsgif" />
     },
     {
       sid: 7,
       project: "Tweeter",
       text: "This was a great project where I first learnt to use React. Its an app where users can book, edit and cancel appointments. It uses Express REST API routes and a Postgres backend. SPA.",
       link: "https://github.com/niccmac/scheduler",
-      accordian: <Image src="tweeterGIF.gif" alt="mapsgif" />,
+      accordian: <Image src="tweeterGIF.gif" alt="mapsgif" />
     },
     {
       sid: 8,
@@ -101,8 +99,8 @@ export default function Projects() {
             />
           </a>
         </>
-      ),
-    },
+      )
+    }
   ];
 
   const slidesCount = slides.length;
@@ -122,94 +120,90 @@ export default function Projects() {
 
   const carouselStyle = {
     transition: "all 1.2s",
-    ml: `-${currentSlide * 100}%`,
+    ml: `-${currentSlide * 100}%`
   };
 
   return (
-    <div className="projects">
-      <Container w="full" className="wholecontainer" margin={10}>
-        <Flex bg="transparent" w="90vw" className="113">
-          <Flex pos="relative" className="114">
-            <Flex h="full" w="90vw" {...carouselStyle} className="115">
-              <Box boxSize="full" flex="none" align="center" padding={4}>
+    <>
+      <Flex pos="relative" w="100%" height={["1000px"]}>
+        <Flex h="full" w="100%" {...carouselStyle}>
+          <Box align="center" boxSize="full" flex="none" padding={4}>
+            <Container
+              flexDirection="column"
+              align="left"
+              backgroundColor="brand.600"
+              h="95%"
+              w="100%"
+              style={{
+                boxShadow: "10px 10px  #2D4739"
+              }}
+            >
+              <Text fontSize="3xl" w="100%">
+                Projects
+              </Text>
+              <Divider />
+              <Text fontSize="sm">What I'm working on.</Text>
+            </Container>
+          </Box>
+          {slides.map((slide) => (
+            <>
+              <Box
+                key={`slide-${slide.sid}`}
+                align="center"
+                boxSize="full"
+                flex="none"
+                padding={4}
+              >
                 <Container
                   flexDirection="column"
                   align="left"
+                  justifyContent="center"
                   backgroundColor="brand.600"
                   h="95%"
-                  w="80%"
-                  m={10}
+                  w="100%"
                   style={{
-                    boxShadow: "10px 10px  #2D4739",
+                    boxShadow: "10px 10px  #2D4739"
                   }}
                 >
-                  <Text fontSize="3xl" w="100%">
-                    Projects
-                  </Text>
-                  <Divider />
-                  <Text fontSize="sm">What I'm working on.</Text>
+                  <Container
+                    paddingTop={10}
+                    flexDirection="column"
+                    align="left"
+                    margin={1}
+                    backgroundColor="brand.600"
+                    h="35%"
+                    w="80%"
+                    m={10}
+                    // overflow="scroll"
+                  >
+                    <Text fontSize="3xl" w="100%">
+                      <a href={slide.link} target="	_blank">
+                        {slide.project}
+                      </a>
+                    </Text>
+                    <Divider />
+                    <Text fontSize="sm"> {slide.text}</Text>
+                  </Container>
+
+                  {slide.accordian}
                 </Container>
               </Box>
-              {slides.map((slide) => (
-                <>
-                  <Box
-                    key={`slide-${slide.sid}`}
-                    align="center"
-                    boxSize="full"
-                    flex="none"
-                    padding={4}
-                  >
-                    <Container
-                      flexDirection="column"
-                      align="left"
-                      justifyContent="center"
-                      backgroundColor="brand.600"
-                      h="95%"
-                      w="80%"
-                      m={10}
-                      style={{
-                        boxShadow: "10px 10px  #2D4739",
-                      }}
-                    >
-                      <Container
-                        paddingTop={10}
-                        flexDirection="column"
-                        align="left"
-                        margin={1}
-                        backgroundColor="brand.600"
-                        h="35%"
-                        w="80%"
-                        m={10}
-                        // overflow="scroll"
-                      >
-                        <Text fontSize="3xl" w="100%">
-                          <a href={slide.link} target="	_blank">
-                            {slide.project}
-                          </a>
-                        </Text>
-                        <Divider />
-                        <Text fontSize="sm"> {slide.text}</Text>
-                      </Container>
-
-                      {slide.accordian}
-                    </Container>
-                  </Box>
-                </>
-              ))}
-            </Flex>
-            <Text {...arrowStyles} left="0" onClick={prevSlide}>
-              &#10094;
-            </Text>
-            <Text {...arrowStyles} right="0" onClick={nextSlide}>
-              &#10095;
-            </Text>
-          </Flex>
+            </>
+          ))}
         </Flex>
-      </Container>
+        <Text {...arrowStyles} left="0" onClick={prevSlide}>
+          &#10094;
+        </Text>
+        <Text {...arrowStyles} right="0" onClick={nextSlide}>
+          &#10095;
+        </Text>
+      </Flex>
+      {/* </Flex> */}
+      {/* </Container> */}
       <Container w="full" className="check-width">
         <HStack justifyContent="center" margin={4}>
           {Array.from({
-            length: slidesCount + 1,
+            length: slidesCount + 1
           }).map((_, slide) => (
             <Box
               key={`dots-${slide}`}
@@ -221,13 +215,14 @@ export default function Projects() {
               display="inline-block"
               transition="background-color 0.6s ease"
               _hover={{
-                bg: "blackAlpha.800",
+                bg: "blackAlpha.800"
               }}
               onClick={() => setSlide(slide)}
             ></Box>
           ))}
         </HStack>
       </Container>
-    </div>
+    </>
   );
-}
+};
+export default Projects;
