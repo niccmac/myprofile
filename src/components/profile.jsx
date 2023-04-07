@@ -6,7 +6,7 @@ export default function Profile() {
   return (
     <Flex
       flexDirection={["column", "row"]}
-      h={["250", "300"]}
+      h={["400", "300"]}
       alignItems="center"
       padding={[4, 8]}
       w="60%"
