@@ -1,15 +1,10 @@
 import {
   Box,
   SimpleGrid,
-  Flex,
-  Icon,
-  chakra,
   Center,
   Text,
   Divider,
-  Grid,
-  GridItem,
-  Container,
+  Container
 } from "@chakra-ui/react";
 import {
   DiJsBadge,
@@ -20,7 +15,7 @@ import {
   DiHtml5,
   DiPostgresql,
   DiNodejsSmall,
-  DiGit,
+  DiGit
 } from "react-icons/di";
 import {
   SiExpress,
@@ -29,7 +24,7 @@ import {
   SiChai,
   SiCypress,
   SiChakraui,
-  SiMaterialui,
+  SiMaterialui
 } from "react-icons/si";
 
 export default function Skills() {
@@ -37,103 +32,99 @@ export default function Skills() {
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
 
-      alt: "JS",
+      alt: "JS"
     },
 
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg",
-      alt: "react",
+      alt: "react"
     },
 
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-plain-wordmark.svg",
-      alt: "ruby",
+      alt: "ruby"
     },
 
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain.svg",
-      alt: "rails",
+      alt: "rails"
     },
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg",
-      alt: "css",
+      alt: "css"
     },
 
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain.svg",
-      alt: "jq",
+      alt: "jq"
     },
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg",
-      alt: "HTML",
+      alt: "HTML"
     },
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg",
-      alt: "postgres",
+      alt: "postgres"
     },
     {
       src: "https://img.icons8.com/color/400/000000/chakra-ui.png",
-      alt: "chakra ui",
+      alt: "chakra ui"
     },
 
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg",
-      alt: "node.js",
+      alt: "node.js"
     },
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-      alt: "express",
+      alt: "express"
     },
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg",
-      alt: "sequ",
+      alt: "sequ"
     },
     {
       src: "https://avatars.githubusercontent.com/u/1515293?s=200&v=4",
-      alt: "chai",
+      alt: "chai"
     },
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg",
-      alt: "git",
+      alt: "git"
     },
 
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg",
-      alt: "Mocha",
+      alt: "Mocha"
     },
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
-      alt: "MUI",
+      alt: "MUI"
     },
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-      alt: "figma",
+      alt: "figma"
     },
 
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-      alt: "sass",
+      alt: "sass"
     },
     {
       src: "https://www.opencodez.com/wp-content/uploads/2019/12/cypress-logo.png",
-      alt: "cypress",
+      alt: "cypress"
     },
     {
       src: "https://img.icons8.com/dusk/400/000000/api.png",
-      alt: "APIS",
-    },
+      alt: "APIS"
+    }
   ];
   return (
-    <SimpleGrid
-      columns={1}
-      backgroundColor="brand.600"
-      // justifyContent="center"
-      w="70%"
-    >
+    <SimpleGrid columns={1} backgroundColor="brand.600" w={["92%", "70%"]}>
       <Box
         colSpan={1}
+        padding={[4, 8]}
         style={{
-          boxShadow: "10px 10px  #2D4739",
+          boxShadow: "10px 10px  #2D4739"
         }}
       >
         <Center flexDirection="column">
@@ -151,11 +142,12 @@ export default function Skills() {
           </Container>
 
           <SimpleGrid
-            padding={4}
-            columns={10}
-            spacingX={5}
-            spacingY={10}
+            padding={[4]}
+            columns={[2, 10]}
+            spacingX={[5]}
+            spacingY={[10]}
             mt={6}
+            mb={10}
             justifyItems="center"
           >
             {skills.map((skill) => {

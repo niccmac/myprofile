@@ -29,14 +29,12 @@ function App() {
           flexDirection="column"
           marginBottom={["200px"]}
           marginTop={["30px", "100px"]}
+          gap={4}
         >
           <Profile />
           <Projects />
-          <br />
           <Skills />
-          <br />
           <Work />
-          <br />
           <Email />
         </Flex>
         <div className="contact">

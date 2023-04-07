@@ -7,13 +7,12 @@ export default function Profile() {
       flexDirection={["column", "row"]}
       h={["250", "200"]}
       alignItems="center"
-      padding={4}
+      padding={[4, 8]}
       w="100%"
       justifyContent="space-between"
       backgroundColor="brand.600"
       marginBottom={"20px"}
       style={{
-        padding: 4,
         boxShadow: "10px 10px #2D4739"
       }}
     >

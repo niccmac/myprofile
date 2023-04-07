@@ -125,7 +125,7 @@ export const Projects = () => {
 
   return (
     <>
-      <Flex pos="relative" w="100%" height={["1000px"]}>
+      <Flex pos="relative" w="100%" height={["1000px"]} padding={[4, 8]}>
         <Flex h="full" w="100%" {...carouselStyle}>
           <Box align="center" boxSize="full" flex="none" padding={4}>
             <Container
@@ -198,8 +198,6 @@ export const Projects = () => {
           &#10095;
         </Text>
       </Flex>
-      {/* </Flex> */}
-      {/* </Container> */}
       <Container w="full" className="check-width">
         <HStack justifyContent="center" margin={4}>
           {Array.from({
@@ -218,7 +216,7 @@ export const Projects = () => {
                 bg: "blackAlpha.800"
               }}
               onClick={() => setSlide(slide)}
-            ></Box>
+            />
           ))}
         </HStack>
       </Container>
